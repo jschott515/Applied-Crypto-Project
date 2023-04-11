@@ -13,6 +13,7 @@ message = clientSocket.recv(2048) #receive x,f(x) from local host
 print(message.decode())
 clientSocket.close()
 
+# send to third party if requested by user
 trigger = input("Send to Third Party? [y/n]: ")
 if (trigger == "y"):
     clientSocket = socket(AF_INET, SOCK_STREAM)
