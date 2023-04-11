@@ -2,7 +2,7 @@ from socket import *
 from codecs import *
 
 i = 0 #number of clients handled
-val = [6,2,5,7,9]
+val = [6,2,5,7,9] # random values for x
 
 def f(x):
 	return (a*(x**2) + b*(x) + c)
@@ -20,10 +20,12 @@ serverSocket.listen(1)
 
 print("Local Host Started")
 
+# "Secret" Coefficients, only known by host
 a = 17
 b = 4
 c = 25
 
+# print coefficients and value/shadow pairs for debug
 print("A: " + str(a) + "\tB: " + str(b) + "\tC: " + str(c))
 
 print("Value 1: " + str(val[0]) + "\tShadow 1: " + str(f(val[0])))
